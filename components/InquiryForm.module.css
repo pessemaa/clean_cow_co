@@ -1,0 +1,46 @@
+.inquiryForm {
+  background: var(--white);
+  border: 2px solid var(--pale-blue);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.inquiryForm h3 {
+  color: var(--primary-blue);
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.inquiryForm > p {
+  color: var(--gray-medium);
+  margin-bottom: 2rem;
+}
+
+.characterCount {
+  text-align: right;
+  font-size: 0.8rem;
+  color: var(--gray-medium);
+  margin-top: 0.25rem;
+}
+
+.countWarning {
+  color: var(--error-red);
+}
+
+@media (max-width: 768px) {
+  .inquiryForm {
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .inquiryForm h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .inquiryForm {
+    padding: 1rem;
+  }
+}

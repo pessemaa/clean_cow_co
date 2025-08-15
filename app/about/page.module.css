@@ -1,0 +1,198 @@
+.about {
+  padding: 2rem 0;
+}
+
+.aboutHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aboutHeader h1 {
+  font-size: 3rem;
+  color: var(--primary-blue);
+  margin-bottom: 1.5rem;
+}
+
+.aboutIntro {
+  font-size: 1.2rem;
+  color: var(--gray-medium);
+  line-height: 1.6;
+}
+
+.aboutContent {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contentSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+  align-items: center;
+}
+
+.contentSection.reverse {
+  direction: rtl;
+}
+
+.contentSection.reverse > * {
+  direction: ltr;
+}
+
+.textContent h2 {
+  color: var(--primary-blue);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.textContent p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  color: var(--gray-dark);
+}
+
+.missionPoints {
+  margin-top: 2rem;
+}
+
+.missionPoint {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: var(--pale-blue);
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-blue);
+}
+
+.missionPoint strong {
+  color: var(--primary-blue);
+}
+
+.aboutImage {
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.placeholderImage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.placeholderImage.soapMaking {
+  background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+}
+
+.placeholderImage.ingredients {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.valuesSection {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.valuesSection h2 {
+  color: var(--primary-blue);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.valueCard {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.valueCard:hover {
+  transform: translateY(-5px);
+}
+
+.valueIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.valueCard h3 {
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.valueCard p {
+  color: var(--gray-medium);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .aboutHeader h1 {
+    font-size: 2.5rem;
+  }
+
+  .aboutIntro {
+    font-size: 1.1rem;
+  }
+
+  .contentSection {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .contentSection.reverse {
+    direction: ltr;
+  }
+
+  .textContent h2 {
+    font-size: 1.75rem;
+  }
+
+  .aboutImage {
+    height: 250px;
+  }
+
+  .valuesSection h2 {
+    font-size: 2rem;
+  }
+
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 1rem 0;
+  }
+
+  .aboutHeader {
+    margin-bottom: 2rem;
+  }
+
+  .aboutHeader h1 {
+    font-size: 2rem;
+  }
+
+  .valueCard {
+    padding: 1.5rem;
+  }
+}
