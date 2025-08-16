@@ -59,9 +59,11 @@ export default function About() {
             </div>
             <div className={styles.imageContent}>
               <div className={styles.aboutImage}>
-                <div className={`${styles.placeholderImage} ${styles.soapMaking}`}>
-                  <span>Soap Making Process</span>
-                </div>
+                <img 
+                    src="/about/soap_process.webp" 
+                    alt="Soap making process at Clean Cow Co"
+                    className={styles.aboutImageImg}
+                />
               </div>
             </div>
           </div>
@@ -93,9 +95,11 @@ export default function About() {
             </div>
             <div className={styles.imageContent}>
               <div className={styles.aboutImage}>
-                <div className={`${styles.placeholderImage} ${styles.ingredients}`}>
-                  <span>Natural Ingredients</span>
-                </div>
+                <img 
+                  src="/about/ingredients.webp" 
+                  alt="Natural ingredients used in our soaps"
+                  className={styles.aboutImageImg}
+                />
               </div>
             </div>
           </div>
