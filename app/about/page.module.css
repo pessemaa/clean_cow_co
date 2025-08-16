@@ -121,6 +121,9 @@
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
+  flex: 1 1 250px; /* Grow, shrink, base width */
+  max-width: 300px; /* Prevent cards from getting too wide */
+  min-height: 200px;
 }
 
 .valueCard:hover {
