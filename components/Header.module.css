@@ -42,6 +42,49 @@
   color: var(--primary-blue);
 }
 
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cartButton {
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.cartButton:hover {
+  background-color: var(--gray-light);
+}
+
+.cartIcon {
+  font-size: 1.5rem;
+  color: var(--gray-dark);
+}
+
+.cartBadge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--error-red);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+  transform: translate(25%, -25%);
+}
+
 .menuToggle {
   display: none;
   flex-direction: column;

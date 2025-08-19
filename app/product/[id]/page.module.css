@@ -114,6 +114,9 @@
 
 .productActions {
   margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .loadingContainer {
@@ -187,6 +190,14 @@
   .errorActions .btn {
     width: 100%;
     max-width: 300px;
+  }
+
+  .productActions {
+    flex-direction: column;
+  }
+
+  .productActions .btn {
+    width: 100%;
   }
 }
 

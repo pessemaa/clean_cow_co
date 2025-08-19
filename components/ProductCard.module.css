@@ -1,7 +1,14 @@
+.productCardWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .productCardLink {
   text-decoration: none;
   color: inherit;
   display: block;
+  flex: 1;
 }
 
 .productCard {
@@ -80,6 +87,23 @@
   margin-top: auto;
 }
 
+.addToCartButton {
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 0 0 12px 12px;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: auto;
+}
+
+.addToCartButton:hover {
+  background-color: var(--dark-blue);
+}
+
 @media (max-width: 480px) {
   .productImage {
     height: 200px;
@@ -95,5 +119,10 @@
 
   .productPrice {
     font-size: 1.3rem;
+  }
+
+  .addToCartButton {
+    padding: 0.5rem;
+    font-size: 0.8rem;
   }
 }

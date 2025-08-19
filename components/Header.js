@@ -2,10 +2,13 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
+import { useCart } from '../contexts/CartContext'
 import styles from './Header.module.css'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { getTotalItems } = useCart()
+  const totalItems = getTotalItems()
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -29,15 +32,27 @@ export default function Header() {
             </ul>
           </nav>
 
-          <button 
-            className={`${styles.menuToggle} ${isMenuOpen ? styles.active : ''}`}
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+          <div className={styles.headerActions}>
+            {/* Cart Icon */}
+            <Link href="/cart" className={styles.cartButton}>
+              <span className={styles.cartIcon}>🛒</span>
+              {totalItems > 0 && (
+                <span className={styles.cartBadge}>
+                  {totalItems}
+                </span>
+              )}
+            </Link>
+
+            <button 
+              className={`${styles.menuToggle} ${isMenuOpen ? styles.active : ''}`}
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
         </div>
       </div>
     </header>
