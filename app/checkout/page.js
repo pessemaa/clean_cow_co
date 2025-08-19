@@ -237,7 +237,7 @@ export default function Checkout() {
                     Submitting...
                   </>
                 ) : (
-                  `Submit Inquiry for ${getTotalPrice().toFixed(2)} Order`
+                  `Submit Order Inquiry`
                 )}
               </button>
             </form>
