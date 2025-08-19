@@ -7,7 +7,7 @@ import styles from './Header.module.css'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const { getTotalItems } = useCart()
+  const { getTotalItems, isLoaded } = useCart()
   const totalItems = getTotalItems()
 
   const toggleMenu = () => {
@@ -36,10 +36,13 @@ export default function Header() {
             {/* Cart Icon */}
             <Link href="/cart" className={styles.cartButton}>
               <span className={styles.cartIcon}>🛒</span>
-              {totalItems > 0 && (
+              {isLoaded && totalItems > 0 && (
                 <span className={styles.cartBadge}>
                   {totalItems}
                 </span>
+              )}
+              {!isLoaded && (
+                <span className={styles.cartLoading}></span>
               )}
             </Link>
 

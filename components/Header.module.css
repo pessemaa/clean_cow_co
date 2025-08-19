@@ -85,6 +85,27 @@
   transform: translate(25%, -25%);
 }
 
+.cartLoading {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary-blue);
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+  transform: translate(25%, -25%);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
 .menuToggle {
   display: none;
   flex-direction: column;
