@@ -162,8 +162,8 @@ export default function Checkout() {
           {/* Inquiry Form */}
           <div className={styles.checkoutForm}>
             <h3>Complete Your Inquiry</h3>
-            <p>We'll contact you about your selected items and arrange the details.</p>
-            
+            <p>We&apos;ll contact you about your selected items and arrange the details.</p>
+
             <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="name" className="form-label">Name *</label>
