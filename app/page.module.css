@@ -23,9 +23,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* Fallback gradient with forest green & sage colors */
   background: linear-gradient(135deg, var(--primary-green) 0%, var(--deep-green) 50%, var(--sage-green) 100%);
-  /* Add some texture with pseudo-elements */
 }
 
 .heroBackground::before {
@@ -86,40 +84,30 @@
   flex-wrap: wrap;
 }
 
-.heroButtons .btn {
+/* ✅ FIX: override global UI button styles */
+.heroButtons :global(.btn) {
   min-width: 200px;
   font-size: 1.1rem;
   font-weight: 600;
   box-shadow: 0 8px 25px rgba(44, 24, 16, 0.3);
 }
 
-.heroButtons .btn-primary {
+.heroButtons :global(.btn-primary),
+.heroButtons :global(.btn-secondary) {
   background: var(--warm-cream) !important;
   color: var(--primary-green) !important;
   border: 2px solid var(--primary-green) !important;
 }
 
-.heroButtons .btn-primary:hover {
+.heroButtons :global(.btn-primary:hover),
+.heroButtons :global(.btn-secondary:hover) {
   background: rgba(255, 255, 255, 0.95) !important;
   color: var(--deep-green) !important;
   transform: translateY(-4px);
   box-shadow: 0 12px 35px rgba(255, 255, 255, 0.4);
 }
 
-.heroButtons .btn-secondary {
-  background: var(--warm-cream) !important;
-  color: var(--primary-green) !important;
-  border: 2px solid var(--primary-green) !important;
-  backdrop-filter: blur(10px);
-}
-
-.heroButtons .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.95) !important;
-  color: var(--deep-green) !important;
-  transform: translateY(-4px);
-  box-shadow: 0 12px 35px rgba(255, 255, 255, 0.4);
-}
-
+/* --- the rest of your file unchanged --- */
 .features {
   padding: 4rem 0;
   background: linear-gradient(135deg, var(--bg-light) 0%, rgba(156, 175, 136, 0.08) 100%);
@@ -230,7 +218,7 @@
     gap: 1rem;
   }
 
-  .heroButtons .btn {
+  .heroButtons :global(.btn) {
     width: 100%;
     max-width: 300px;
     min-width: auto;
