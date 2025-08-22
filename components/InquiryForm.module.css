@@ -1,6 +1,6 @@
 .inquiryForm {
-  background: linear-gradient(135deg, var(--cream-white) 0%, var(--blush-pink) 100%);
-  border: 2px solid var(--soft-pink);
+  background: linear-gradient(135deg, var(--warm-cream) 0%, var(--light-sage) 100%);
+  border: 2px solid var(--sage-green);
   border-radius: 20px;
   padding: 2rem;
   margin-top: 3rem;
@@ -9,7 +9,7 @@
 }
 
 .inquiryForm h3 {
-  color: var(--primary-rose);
+  color: var(--primary-green);
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
   font-family: 'Fredoka', cursive;

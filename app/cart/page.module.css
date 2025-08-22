@@ -5,26 +5,26 @@
 
 .cart h1 {
   font-size: 3rem;
-  color: var(--primary-rose);
+  color: var(--primary-green);
   margin-bottom: 2.5rem;
   text-align: center;
   font-family: 'Fredoka', cursive;
   font-weight: 700;
-  text-shadow: 0 2px 4px rgba(196, 150, 154, 0.1);
+  text-shadow: 0 2px 4px rgba(45, 90, 39, 0.1);
 }
 
 .emptyCart {
   text-align: center;
   padding: 5rem 0;
-  background: linear-gradient(135deg, var(--cream-white) 0%, var(--blush-pink) 100%);
+  background: linear-gradient(135deg, var(--warm-cream) 0%, var(--light-sage) 100%);
   border-radius: 25px;
   box-shadow: var(--shadow-soft);
-  border: 2px solid rgba(232, 213, 215, 0.3);
+  border: 2px solid rgba(156, 175, 136, 0.3);
 }
 
 .emptyCart h1 {
   margin-bottom: 1.5rem;
-  color: var(--primary-rose);
+  color: var(--primary-green);
   font-size: 2.5rem;
 }
 
@@ -48,7 +48,7 @@
 }
 
 .cartItem {
-  background: linear-gradient(135deg, var(--cream-white) 0%, var(--blush-pink) 100%);
+  background: linear-gradient(135deg, var(--warm-cream) 0%, var(--light-sage) 100%);
   border-radius: 20px;
   padding: 2rem;
   box-shadow: var(--shadow-soft);
@@ -56,7 +56,7 @@
   grid-template-columns: 120px 1fr auto auto auto;
   gap: 1.5rem;
   align-items: center;
-  border: 2px solid rgba(232, 213, 215, 0.3);
+  border: 2px solid rgba(156, 175, 136, 0.3);
   transition: all 0.3s ease;
   position: relative;
   overflow: visible;
@@ -69,7 +69,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at center, rgba(232, 213, 215, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle at center, rgba(156, 175, 136, 0.1) 0%, transparent 70%);
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
@@ -82,7 +82,7 @@
 .cartItem:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-medium);
-  border-color: var(--soft-pink);
+  border-color: var(--sage-green);
 }
 
 .itemImage {
@@ -91,7 +91,7 @@
   border-radius: 15px;
   overflow: hidden;
   background: var(--cream-light);
-  box-shadow: 0 4px 12px rgba(196, 150, 154, 0.15);
+  box-shadow: 0 4px 12px rgba(45, 90, 39, 0.15);
 }
 
 .itemImage img {
@@ -107,7 +107,7 @@
 
 .itemDetails h3 {
   margin: 0 0 0.5rem 0;
-  color: var(--primary-rose);
+  color: var(--primary-green);
   font-family: 'Fredoka', cursive;
   font-weight: 600;
   font-size: 1.3rem;
@@ -115,9 +115,9 @@
 
 .itemSize {
   margin: 0;
-  color: var(--primary-rose);
+  color: var(--primary-green);
   font-size: 0.95rem;
-  background: var(--soft-pink);
+  background: var(--sage-green);
   padding: 0.3rem 0.8rem;
   border-radius: 15px;
   display: inline-block;
@@ -126,7 +126,7 @@
 
 .itemPrice {
   margin: 0.75rem 0 0 0;
-  color: var(--deep-rose);
+  color: var(--deep-green);
   font-weight: 700;
   font-size: 1.1rem;
   font-family: 'Fredoka', cursive;
@@ -136,16 +136,16 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  background: var(--cream-white);
+  background: var(--warm-cream);
   padding: 0.5rem;
   border-radius: 15px;
-  box-shadow: inset 0 2px 4px rgba(232, 213, 215, 0.15);
+  box-shadow: inset 0 2px 4px rgba(156, 175, 136, 0.15);
   z-index: 10;
   position: relative;
 }
 
 .quantityButton {
-  background: linear-gradient(135deg, var(--soft-pink) 0%, var(--blush-pink) 100%);
+  background: linear-gradient(135deg, var(--sage-green) 0%, var(--light-sage) 100%);
   border: none;
   border-radius: 50%;
   width: 35px;
@@ -155,7 +155,7 @@
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  color: var(--primary-rose);
+  color: var(--primary-green);
   transition: all 0.3s ease;
   font-size: 1.2rem;
   line-height: 1;
@@ -166,7 +166,7 @@
 }
 
 .quantityButton:hover {
-  background: linear-gradient(135deg, var(--blush-pink) 0%, var(--primary-rose) 100%);
+  background: linear-gradient(135deg, var(--light-sage) 0%, var(--primary-green) 100%);
   color: var(--white);
   transform: scale(1.1);
 }
@@ -180,14 +180,14 @@
   text-align: center;
   font-weight: 600;
   font-size: 1.1rem;
-  color: var(--primary-rose);
+  color: var(--primary-green);
   font-family: 'Fredoka', cursive;
   user-select: none;
 }
 
 .itemTotal {
   font-weight: 700;
-  color: var(--primary-rose);
+  color: var(--primary-green);
   font-size: 1.3rem;
   font-family: 'Fredoka', cursive;
 }
@@ -212,7 +212,7 @@
 .removeButton:hover {
   background: linear-gradient(135deg, var(--error-red) 0%, #dc2626 100%);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(230, 126, 126, 0.4);
+  box-shadow: 0 4px 12px rgba(200, 90, 84, 0.4);
 }
 
 .removeButton:active {
@@ -220,19 +220,19 @@
 }
 
 .cartSummary {
-  background: linear-gradient(135deg, var(--cream-white) 0%, var(--blush-pink) 100%);
+  background: linear-gradient(135deg, var(--warm-cream) 0%, var(--light-sage) 100%);
   border-radius: 20px;
   padding: 2.5rem;
   box-shadow: var(--shadow-soft);
   height: fit-content;
   position: sticky;
   top: 2rem;
-  border: 2px solid rgba(232, 213, 215, 0.3);
+  border: 2px solid rgba(156, 175, 136, 0.3);
 }
 
 .cartSummary h2 {
   margin: 0 0 2rem 0;
-  color: var(--primary-rose);
+  color: var(--primary-green);
   font-family: 'Fredoka', cursive;
   font-weight: 700;
   font-size: 1.8rem;
@@ -245,10 +245,10 @@
   margin-bottom: 2.5rem;
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--primary-rose);
+  color: var(--primary-green);
   font-family: 'Fredoka', cursive;
   padding: 1rem;
-  background: linear-gradient(135deg, var(--soft-pink) 0%, var(--blush-pink) 100%);
+  background: linear-gradient(135deg, var(--sage-green) 0%, var(--light-sage) 100%);
   border-radius: 15px;
 }
 

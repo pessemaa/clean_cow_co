@@ -1,6 +1,6 @@
 .footer {
-  background: linear-gradient(135deg, var(--primary-rose) 0%, var(--deep-rose) 50%, var(--gray-dark) 100%);
-  color: var(--cream-white);
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--deep-green) 50%, var(--gray-dark) 100%);
+  color: var(--warm-cream);
   margin-top: auto;
   position: relative;
   overflow: hidden;
@@ -14,7 +14,7 @@
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at 20% 20%, rgba(230, 145, 168, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 20% 20%, rgba(156, 175, 136, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
   pointer-events: none;
 }
@@ -38,13 +38,13 @@
 
 .footerSection h3,
 .footerSection h4 {
-  color: var(--cream-white);
+  color: var(--warm-cream);
   margin-bottom: 1.5rem;
   font-family: 'Fredoka', cursive;
 }
 
 .footerSection h3 {
-  color: var(--light-gold);
+  color: var(--eucalyptus);
   font-size: 1.8rem;
   font-weight: 700;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -53,7 +53,7 @@
 .footerSection h4 {
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--blush-pink);
+  color: var(--light-sage);
 }
 
 .footerSection p {
@@ -93,13 +93,13 @@
   top: 50%;
   width: 0;
   height: 2px;
-  background: var(--light-gold);
+  background: var(--eucalyptus);
   transition: width 0.3s ease;
   transform: translateY(-50%);
 }
 
 .footerSection ul a:hover {
-  color: var(--light-gold);
+  color: var(--eucalyptus);
   padding-left: 1rem;
 }
 
@@ -108,7 +108,7 @@
 }
 
 .footerBottom {
-  border-top: 2px solid rgba(230, 145, 168, 0.3);
+  border-top: 2px solid rgba(156, 175, 136, 0.3);
   padding: 2rem 0;
   text-align: center;
   position: relative;

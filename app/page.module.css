@@ -22,8 +22,8 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* Fallback gradient with blush & rose gold colors */
-  background: linear-gradient(135deg, var(--primary-rose) 0%, var(--deep-rose) 50%, var(--rose-gold) 100%);
+  /* Fallback gradient with forest green & sage colors */
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--deep-green) 50%, var(--sage-green) 100%);
   /* Add some texture with pseudo-elements */
 }
 
@@ -36,7 +36,7 @@
   bottom: 0;
   background: 
     radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(230, 145, 168, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(156, 175, 136, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
 }
 
@@ -46,7 +46,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(184, 88, 122, 0.7) 0%, rgba(155, 75, 107, 0.5) 50%, rgba(212, 175, 55, 0.3) 100%);
+  background: linear-gradient(135deg, rgba(45, 90, 39, 0.7) 0%, rgba(30, 62, 26, 0.5) 50%, rgba(139, 111, 71, 0.3) 100%);
 }
 
 .heroContent {
@@ -60,7 +60,7 @@
 .hero h1 {
   font-size: 3.5rem;
   margin-bottom: 1.5rem;
-  color: var(--cream-white);
+  color: var(--warm-cream);
   text-shadow: 2px 2px 8px rgba(44, 24, 16, 0.5);
   font-family: 'Fredoka', cursive;
   font-weight: 700;
@@ -93,33 +93,33 @@
 }
 
 .heroButtons .btn-primary {
-  background: linear-gradient(135deg, var(--rose-gold) 0%, var(--warm-gold) 100%);
+  background: linear-gradient(135deg, var(--natural-brown) 0%, var(--earth-brown) 100%);
   border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .heroButtons .btn-primary:hover {
-  background: linear-gradient(135deg, var(--warm-gold) 0%, var(--rose-gold) 100%);
+  background: linear-gradient(135deg, var(--earth-brown) 0%, var(--natural-brown) 100%);
   transform: translateY(-4px);
   box-shadow: 0 12px 35px rgba(44, 24, 16, 0.4);
 }
 
 .heroButtons .btn-secondary {
   background: rgba(255, 255, 255, 0.95);
-  color: var(--primary-rose);
-  border: 2px solid var(--cream-white);
+  color: var(--primary-green);
+  border: 2px solid var(--warm-cream);
   backdrop-filter: blur(10px);
 }
 
 .heroButtons .btn-secondary:hover {
-  background: var(--cream-white);
-  color: var(--deep-rose);
+  background: var(--warm-cream);
+  color: var(--deep-green);
   transform: translateY(-4px);
   box-shadow: 0 12px 35px rgba(255, 255, 255, 0.4);
 }
 
 .features {
   padding: 4rem 0;
-  background: linear-gradient(135deg, var(--bg-light) 0%, rgba(230, 145, 168, 0.08) 100%);
+  background: linear-gradient(135deg, var(--bg-light) 0%, rgba(156, 175, 136, 0.08) 100%);
   border-radius: 25px;
   margin: 2rem 0;
 }
@@ -128,10 +128,10 @@
   text-align: center;
   margin-bottom: 3rem;
   font-size: 2.8rem;
-  color: var(--primary-rose);
+  color: var(--primary-green);
   font-family: 'Fredoka', cursive;
   font-weight: 700;
-  text-shadow: 0 2px 4px rgba(184, 88, 122, 0.1);
+  text-shadow: 0 2px 4px rgba(45, 90, 39, 0.1);
 }
 
 .featuresGrid {
@@ -147,13 +147,13 @@
 }
 
 .featureCard {
-  background: linear-gradient(135deg, var(--cream-white) 0%, var(--blush-pink) 100%);
+  background: linear-gradient(135deg, var(--warm-cream) 0%, var(--light-sage) 100%);
   padding: 2.5rem;
   border-radius: 25px;
   text-align: center;
   box-shadow: var(--shadow-soft);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border: 2px solid rgba(230, 145, 168, 0.3);
+  border: 2px solid rgba(156, 175, 136, 0.3);
   position: relative;
   overflow: hidden;
 }
@@ -165,7 +165,7 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(230, 145, 168, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(156, 175, 136, 0.15) 0%, transparent 70%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -177,13 +177,13 @@
 .featureCard:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: var(--shadow-strong);
-  border-color: var(--soft-pink);
+  border-color: var(--sage-green);
 }
 
 .featureIcon {
   font-size: 3rem;
   margin-bottom: 1.5rem;
-  filter: drop-shadow(0 4px 8px rgba(184, 88, 122, 0.2));
+  filter: drop-shadow(0 4px 8px rgba(45, 90, 39, 0.2));
   transition: transform 0.3s ease;
 }
 
@@ -192,7 +192,7 @@
 }
 
 .featureCard h3 {
-  color: var(--primary-rose);
+  color: var(--primary-green);
   margin-bottom: 1rem;
   font-size: 1.4rem;
   font-family: 'Fredoka', cursive;

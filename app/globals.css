@@ -9,40 +9,40 @@
 }
 
 :root {
-  /* Primary Colors - Enhanced Blush & Rose Gold Theme */
-  --primary-rose: #B8587A;
-  --deep-rose: #9B4B6B;
-  --soft-pink: #E691A8;
-  --blush-pink: #F0B5C8;
-  --rose-gold: #D4AF37;
-  --warm-gold: #E6C547;
-  --light-gold: #F5E6A3;
-  --cream-white: #FDF8F5;
+  /* Primary Colors - Forest Green & Sage Theme */
+  --primary-green: #2D5A27;
+  --deep-green: #1E3E1A;
+  --sage-green: #9CAF88;
+  --light-sage: #B8C7A8;
+  --forest-accent: #4A7C59;
+  --warm-cream: #F5F2E8;
+  --soft-lavender: #E8E2F0;
+  --natural-brown: #8B6F47;
   
   /* Accent Colors */
-  --coral-accent: #E85A7B;
-  --peach-accent: #F4A67A;
-  --lavender-accent: #D8A3E8;
-  --mint-accent: #A8D8A8;
+  --earth-brown: #8B7355;
+  --moss-green: #7A8471;
+  --eucalyptus: #A8BFA8;
+  --lavender-mist: #DDD6E8;
   
   /* Neutral Colors */
   --white: #FFFFFF;
   --black: #2C1810;
-  --cream-light: #FAF7F4;
-  --gray-medium: #8B7B7B;
-  --gray-dark: #5D4E4E;
-  --success-green: #90C695;
-  --error-red: #E67E7E;
-  --warning-orange: #F4B366;
+  --cream-light: #FAF8F2;
+  --gray-medium: #7A7A7A;
+  --gray-dark: #4A4A4A;
+  --success-green: #7FB069;
+  --error-red: #C85A54;
+  --warning-orange: #E8A87C;
   
   /* Background */
-  --bg-light: #FDF9F7;
-  --bg-cream: #FAF6F3;
+  --bg-light: #FDFCF8;
+  --bg-cream: #F9F7F0;
   
   /* Shadows */
-  --shadow-soft: 0 4px 20px rgba(184, 88, 122, 0.15);
-  --shadow-medium: 0 8px 30px rgba(184, 88, 122, 0.2);
-  --shadow-strong: 0 12px 40px rgba(184, 88, 122, 0.25);
+  --shadow-soft: 0 4px 20px rgba(45, 90, 39, 0.12);
+  --shadow-medium: 0 8px 30px rgba(45, 90, 39, 0.18);
+  --shadow-strong: 0 12px 40px rgba(45, 90, 39, 0.25);
 }
 
 body {
@@ -60,7 +60,7 @@ body {
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Fredoka', cursive;
-  color: var(--primary-rose);
+  color: var(--primary-green);
   font-weight: 600;
   line-height: 1.2;
 }
@@ -87,13 +87,13 @@ p {
 
 /* Links */
 a {
-  color: var(--primary-rose);
+  color: var(--primary-green);
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 a:hover {
-  color: var(--deep-rose);
+  color: var(--deep-green);
   transform: translateY(-1px);
 }
 
@@ -131,26 +131,26 @@ a:hover {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary-rose) 0%, var(--deep-rose) 100%);
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--deep-green) 100%);
   color: var(--white);
   border: 2px solid transparent;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, var(--deep-rose) 0%, var(--primary-rose) 100%);
+  background: linear-gradient(135deg, var(--deep-green) 0%, var(--forest-accent) 100%);
   color: var(--white);
   transform: translateY(-3px);
   box-shadow: var(--shadow-medium);
 }
 
 .btn-secondary {
-  background: var(--cream-white);
-  color: var(--primary-rose);
-  border: 2px solid var(--primary-rose);
+  background: var(--warm-cream);
+  color: var(--primary-green);
+  border: 2px solid var(--primary-green);
 }
 
 .btn-secondary:hover {
-  background: var(--primary-rose);
+  background: var(--primary-green);
   color: var(--white);
   transform: translateY(-3px);
   box-shadow: var(--shadow-medium);
@@ -181,7 +181,7 @@ a:hover {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
-  color: var(--primary-rose);
+  color: var(--primary-green);
   font-family: 'Fredoka', cursive;
 }
 
@@ -189,20 +189,20 @@ a:hover {
 .form-textarea {
   width: 100%;
   padding: 14px 18px;
-  border: 2px solid var(--soft-pink);
+  border: 2px solid var(--sage-green);
   border-radius: 15px;
   font-size: 1rem;
   transition: all 0.3s ease;
   font-family: 'Inter', sans-serif;
-  background: var(--cream-white);
-  box-shadow: inset 0 2px 4px rgba(184, 88, 122, 0.1);
+  background: var(--warm-cream);
+  box-shadow: inset 0 2px 4px rgba(45, 90, 39, 0.08);
 }
 
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: var(--primary-rose);
-  box-shadow: 0 0 0 3px rgba(184, 88, 122, 0.15);
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 3px rgba(45, 90, 39, 0.12);
   transform: translateY(-1px);
 }
 
@@ -240,8 +240,8 @@ a:hover {
 .loading-spinner {
   width: 50px;
   height: 50px;
-  border: 4px solid var(--soft-pink);
-  border-top: 4px solid var(--primary-rose);
+  border: 4px solid var(--sage-green);
+  border-top: 4px solid var(--primary-green);
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin: 0 auto;
@@ -254,11 +254,11 @@ a:hover {
 
 /* Cards and Containers */
 .card {
-  background: var(--cream-white);
+  background: var(--warm-cream);
   border-radius: 20px;
   box-shadow: var(--shadow-soft);
   transition: all 0.3s ease;
-  border: 1px solid rgba(232, 213, 215, 0.3);
+  border: 1px solid rgba(156, 175, 136, 0.3);
 }
 
 .card:hover {
@@ -277,12 +277,12 @@ a:hover {
 }
 
 .badge-primary {
-  background: linear-gradient(135deg, var(--soft-pink) 0%, var(--blush-pink) 100%);
-  color: var(--primary-rose);
+  background: linear-gradient(135deg, var(--sage-green) 0%, var(--light-sage) 100%);
+  color: var(--primary-green);
 }
 
 .badge-success {
-  background: linear-gradient(135deg, var(--mint-accent) 0%, var(--success-green) 100%);
+  background: linear-gradient(135deg, var(--eucalyptus) 0%, var(--success-green) 100%);
   color: var(--gray-dark);
 }
 
