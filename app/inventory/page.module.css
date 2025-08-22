@@ -13,11 +13,11 @@
 
 .inventoryHeader h1 {
   font-size: 3rem;
-  color: var(--primary-brown);
+  color: var(--primary-blue);
   margin-bottom: 1rem;
   font-family: 'Fredoka', cursive;
   font-weight: 700;
-  text-shadow: 0 2px 4px rgba(139, 69, 19, 0.1);
+  text-shadow: 0 2px 4px rgba(18, 128, 255, 0.1);
 }
 
 .inventorySubtitle {
@@ -47,7 +47,7 @@
 .loadingContainer {
   text-align: center;
   padding: 4rem 0;
-  background: linear-gradient(135deg, var(--soap-white) 0%, var(--cream) 100%);
+  background: linear-gradient(135deg, var(--white) 0%, var(--very-light-blue) 100%);
   border-radius: 25px;
   box-shadow: var(--shadow-soft);
 }
@@ -62,7 +62,7 @@
 .errorContainer {
   text-align: center;
   padding: 4rem 0;
-  background: linear-gradient(135deg, var(--soap-white) 0%, var(--cream) 100%);
+  background: linear-gradient(135deg, var(--white) 0%, var(--very-light-blue) 100%);
   border-radius: 25px;
   box-shadow: var(--shadow-soft);
 }
@@ -82,13 +82,13 @@
 .emptyState {
   text-align: center;
   padding: 4rem 0;
-  background: linear-gradient(135deg, var(--soap-white) 0%, var(--cream) 100%);
+  background: linear-gradient(135deg, var(--white) 0%, var(--very-light-blue) 100%);
   border-radius: 25px;
   box-shadow: var(--shadow-soft);
 }
 
 .emptyState h3 {
-  color: var(--primary-brown);
+  color: var(--primary-blue);
   margin-bottom: 1rem;
   font-family: 'Fredoka', cursive;
   font-size: 1.8rem;

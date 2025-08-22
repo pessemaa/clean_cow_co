@@ -9,40 +9,40 @@
 }
 
 :root {
-  /* Primary Colors - Forest Green & Sage Theme */
-  --primary-green: #2D5A27;
-  --deep-green: #1E3E1A;
-  --sage-green: #9CAF88;
-  --light-sage: #B8C7A8;
-  --forest-accent: #4A7C59;
-  --warm-cream: #F5F2E8;
-  --soft-lavender: #E8E2F0;
-  --natural-brown: #8B6F47;
+  /* Primary Colors - Ocean Fresh Theme */
+  --primary-blue: #1280FF;
+  --deep-blue: #0A5BC7;
+  --light-blue: #66B3FF;
+  --very-light-blue: #E6F3FF;
+  --ocean-accent: #4D9FFF;
+  --pure-white: #FFFFFF;
+  --ocean-mist: #F0F8FF;
+  --crystal-blue: #80C0FF;
   
   /* Accent Colors */
-  --earth-brown: #8B7355;
-  --moss-green: #7A8471;
-  --eucalyptus: #A8BFA8;
-  --lavender-mist: #DDD6E8;
+  --sky-blue: #87CEEB;
+  --powder-blue: #B0E0E6;
+  --ice-blue: #E8F4FF;
+  --navy-blue: #0856B8;
   
   /* Neutral Colors */
   --white: #FFFFFF;
-  --black: #2C1810;
-  --cream-light: #FAF8F2;
-  --gray-medium: #7A7A7A;
-  --gray-dark: #4A4A4A;
-  --success-green: #7FB069;
-  --error-red: #C85A54;
-  --warning-orange: #E8A87C;
+  --black: #1A1A1A;
+  --off-white: #F8FAFF;
+  --gray-medium: #6B7280;
+  --gray-dark: #374151;
+  --success-blue: #10B981;
+  --error-red: #EF4444;
+  --warning-orange: #F59E0B;
   
   /* Background */
-  --bg-light: #FDFCF8;
-  --bg-cream: #F9F7F0;
+  --bg-light: #FAFCFF;
+  --bg-ocean: #F5F9FF;
   
   /* Shadows */
-  --shadow-soft: 0 4px 20px rgba(45, 90, 39, 0.12);
-  --shadow-medium: 0 8px 30px rgba(45, 90, 39, 0.18);
-  --shadow-strong: 0 12px 40px rgba(45, 90, 39, 0.25);
+  --shadow-soft: 0 4px 20px rgba(18, 128, 255, 0.12);
+  --shadow-medium: 0 8px 30px rgba(18, 128, 255, 0.18);
+  --shadow-strong: 0 12px 40px rgba(18, 128, 255, 0.25);
 }
 
 body {
@@ -53,14 +53,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
   color: var(--gray-dark);
-  background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-cream) 100%);
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-ocean) 100%);
   min-height: 100vh;
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Fredoka', cursive;
-  color: var(--primary-green);
+  color: var(--primary-blue);
   font-weight: 600;
   line-height: 1.2;
 }
@@ -87,13 +87,13 @@ p {
 
 /* Links */
 a {
-  color: var(--primary-green);
+  color: var(--primary-blue);
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 a:hover {
-  color: var(--deep-green);
+  color: var(--deep-blue);
   transform: translateY(-1px);
 }
 
@@ -131,26 +131,26 @@ a:hover {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary-green) 0%, var(--deep-green) 100%);
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-blue) 100%);
   color: var(--white);
   border: 2px solid transparent;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, var(--deep-green) 0%, var(--forest-accent) 100%);
+  background: linear-gradient(135deg, var(--deep-blue) 0%, var(--navy-blue) 100%);
   color: var(--white);
   transform: translateY(-3px);
   box-shadow: var(--shadow-medium);
 }
 
 .btn-secondary {
-  background: var(--warm-cream);
-  color: var(--primary-green);
-  border: 2px solid var(--primary-green);
+  background: var(--white);
+  color: var(--primary-blue);
+  border: 2px solid var(--primary-blue);
 }
 
 .btn-secondary:hover {
-  background: var(--primary-green);
+  background: var(--primary-blue);
   color: var(--white);
   transform: translateY(-3px);
   box-shadow: var(--shadow-medium);
@@ -181,7 +181,7 @@ a:hover {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
-  color: var(--primary-green);
+  color: var(--primary-blue);
   font-family: 'Fredoka', cursive;
 }
 
@@ -189,27 +189,27 @@ a:hover {
 .form-textarea {
   width: 100%;
   padding: 14px 18px;
-  border: 2px solid var(--sage-green);
+  border: 2px solid var(--light-blue);
   border-radius: 15px;
   font-size: 1rem;
   transition: all 0.3s ease;
   font-family: 'Inter', sans-serif;
-  background: var(--warm-cream);
-  box-shadow: inset 0 2px 4px rgba(45, 90, 39, 0.08);
+  background: var(--white);
+  box-shadow: inset 0 2px 4px rgba(18, 128, 255, 0.08);
 }
 
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: var(--primary-green);
-  box-shadow: 0 0 0 3px rgba(45, 90, 39, 0.12);
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(18, 128, 255, 0.12);
   transform: translateY(-1px);
 }
 
 .form-input.error,
 .form-textarea.error {
   border-color: var(--error-red);
-  box-shadow: 0 0 0 3px rgba(230, 126, 126, 0.15);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
 }
 
 .form-error {
@@ -240,8 +240,8 @@ a:hover {
 .loading-spinner {
   width: 50px;
   height: 50px;
-  border: 4px solid var(--sage-green);
-  border-top: 4px solid var(--primary-green);
+  border: 4px solid var(--light-blue);
+  border-top: 4px solid var(--primary-blue);
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin: 0 auto;
@@ -254,11 +254,11 @@ a:hover {
 
 /* Cards and Containers */
 .card {
-  background: var(--warm-cream);
+  background: var(--white);
   border-radius: 20px;
   box-shadow: var(--shadow-soft);
   transition: all 0.3s ease;
-  border: 1px solid rgba(156, 175, 136, 0.3);
+  border: 1px solid rgba(102, 179, 255, 0.3);
 }
 
 .card:hover {
@@ -277,12 +277,12 @@ a:hover {
 }
 
 .badge-primary {
-  background: linear-gradient(135deg, var(--sage-green) 0%, var(--light-sage) 100%);
-  color: var(--primary-green);
+  background: linear-gradient(135deg, var(--light-blue) 0%, var(--very-light-blue) 100%);
+  color: var(--primary-blue);
 }
 
 .badge-success {
-  background: linear-gradient(135deg, var(--eucalyptus) 0%, var(--success-green) 100%);
+  background: linear-gradient(135deg, var(--powder-blue) 0%, var(--success-blue) 100%);
   color: var(--gray-dark);
 }
 

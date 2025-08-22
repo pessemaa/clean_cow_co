@@ -1,10 +1,10 @@
 .header {
-  background: linear-gradient(135deg, var(--warm-cream) 0%, var(--light-sage) 100%);
+  background: linear-gradient(135deg, var(--white) 0%, var(--very-light-blue) 100%);
   box-shadow: var(--shadow-soft);
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 3px solid var(--sage-green);
+  border-bottom: 3px solid var(--light-blue);
 }
 
 .headerContent {
@@ -34,29 +34,29 @@
   gap: 0.75rem;
   padding: 0.5rem 1rem;
   border-radius: 25px;
-  background: linear-gradient(135deg, var(--warm-cream) 0%, rgba(156, 175, 136, 0.2) 100%);
+  background: linear-gradient(135deg, var(--white) 0%, rgba(102, 179, 255, 0.2) 100%);
   transition: all 0.3s ease;
 }
 
 .logoContainer:hover {
-  background: linear-gradient(135deg, rgba(156, 175, 136, 0.2) 0%, var(--warm-cream) 100%);
+  background: linear-gradient(135deg, rgba(102, 179, 255, 0.2) 0%, var(--white) 100%);
   box-shadow: var(--shadow-soft);
 }
 
 .logoImage {
   border-radius: 12px;
   transition: transform 0.3s ease;
-  filter: drop-shadow(0 2px 4px rgba(45, 90, 39, 0.15));
+  filter: drop-shadow(0 2px 4px rgba(18, 128, 255, 0.15));
 }
 
 .logoText {
-  color: var(--primary-green);
+  color: var(--primary-blue);
   margin: 0;
   font-size: 1.8rem;
   font-weight: 700;
   font-family: 'Fredoka', cursive;
   transition: all 0.3s ease;
-  text-shadow: 0 1px 2px rgba(45, 90, 39, 0.1);
+  text-shadow: 0 1px 2px rgba(18, 128, 255, 0.1);
 }
 
 .navList {
@@ -78,8 +78,8 @@
 }
 
 .navList a:hover {
-  color: var(--primary-green);
-  background: linear-gradient(135deg, var(--sage-green) 0%, var(--light-sage) 100%);
+  color: var(--primary-blue);
+  background: linear-gradient(135deg, var(--light-blue) 0%, var(--very-light-blue) 100%);
   transform: translateY(-2px);
   box-shadow: var(--shadow-soft);
 }
@@ -99,26 +99,26 @@
   padding: 0.75rem;
   border-radius: 20px;
   transition: all 0.3s ease;
-  background: linear-gradient(135deg, var(--warm-cream) 0%, var(--sage-green) 100%);
+  background: linear-gradient(135deg, var(--white) 0%, var(--light-blue) 100%);
   box-shadow: var(--shadow-soft);
 }
 
 .cartButton:hover {
-  background: linear-gradient(135deg, var(--sage-green) 0%, var(--light-sage) 100%);
+  background: linear-gradient(135deg, var(--light-blue) 0%, var(--very-light-blue) 100%);
   transform: translateY(-3px);
   box-shadow: var(--shadow-medium);
 }
 
 .cartIcon {
   font-size: 1.5rem;
-  filter: drop-shadow(0 1px 2px rgba(45, 90, 39, 0.2));
+  filter: drop-shadow(0 1px 2px rgba(18, 128, 255, 0.2));
 }
 
 .cartBadge {
   position: absolute;
   top: -2px;
   right: -2px;
-  background: linear-gradient(135deg, var(--natural-brown) 0%, var(--earth-brown) 100%);
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-blue) 100%);
   color: white;
   border-radius: 50%;
   width: 22px;
@@ -128,7 +128,7 @@
   justify-content: center;
   font-size: 0.75rem;
   font-weight: bold;
-  box-shadow: 0 2px 8px rgba(139, 111, 71, 0.4);
+  box-shadow: 0 2px 8px rgba(18, 128, 255, 0.4);
   animation: bounce 2s infinite;
 }
 
@@ -150,7 +150,7 @@
   right: 4px;
   width: 8px;
   height: 8px;
-  background: var(--primary-green);
+  background: var(--primary-blue);
   border-radius: 50%;
   animation: pulse 1.5s infinite;
 }
@@ -169,8 +169,8 @@
 .menuToggle {
   display: none;
   flex-direction: column;
-  background: linear-gradient(135deg, var(--warm-cream) 0%, var(--sage-green) 100%);
-  border: 2px solid var(--primary-green);
+  background: linear-gradient(135deg, var(--white) 0%, var(--light-blue) 100%);
+  border: 2px solid var(--primary-blue);
   cursor: pointer;
   padding: 0.5rem;
   border-radius: 12px;
@@ -178,7 +178,7 @@
 }
 
 .menuToggle:hover {
-  background: linear-gradient(135deg, var(--sage-green) 0%, var(--light-sage) 100%);
+  background: linear-gradient(135deg, var(--light-blue) 0%, var(--very-light-blue) 100%);
   transform: translateY(-2px);
   box-shadow: var(--shadow-soft);
 }
@@ -186,7 +186,7 @@
 .menuToggle span {
   width: 25px;
   height: 3px;
-  background-color: var(--primary-green);
+  background-color: var(--primary-blue);
   margin: 2px 0;
   transition: 0.3s;
   border-radius: 2px;
@@ -220,13 +220,13 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: linear-gradient(135deg, var(--warm-cream) 0%, var(--light-sage) 100%);
+    background: linear-gradient(135deg, var(--white) 0%, var(--very-light-blue) 100%);
     box-shadow: var(--shadow-medium);
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    border-bottom: 3px solid var(--sage-green);
+    border-bottom: 3px solid var(--light-blue);
   }
 
   .navOpen {
