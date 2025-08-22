@@ -9,21 +9,21 @@
 }
 
 :root {
-  /* Primary Colors - Blush & Rose Gold Theme */
-  --primary-rose: #C4969A;
-  --deep-rose: #A67B7F;
-  --soft-pink: #E8D5D7;
-  --blush-pink: #F2E4E6;
+  /* Primary Colors - Enhanced Blush & Rose Gold Theme */
+  --primary-rose: #B8587A;
+  --deep-rose: #9B4B6B;
+  --soft-pink: #E691A8;
+  --blush-pink: #F0B5C8;
   --rose-gold: #D4AF37;
   --warm-gold: #E6C547;
   --light-gold: #F5E6A3;
   --cream-white: #FDF8F5;
   
   /* Accent Colors */
-  --coral-accent: #E6A5A5;
-  --peach-accent: #F4C2A1;
-  --lavender-accent: #E8D5E8;
-  --mint-accent: #D5E8D5;
+  --coral-accent: #E85A7B;
+  --peach-accent: #F4A67A;
+  --lavender-accent: #D8A3E8;
+  --mint-accent: #A8D8A8;
   
   /* Neutral Colors */
   --white: #FFFFFF;
@@ -40,9 +40,9 @@
   --bg-cream: #FAF6F3;
   
   /* Shadows */
-  --shadow-soft: 0 4px 20px rgba(196, 150, 154, 0.15);
-  --shadow-medium: 0 8px 30px rgba(196, 150, 154, 0.2);
-  --shadow-strong: 0 12px 40px rgba(196, 150, 154, 0.25);
+  --shadow-soft: 0 4px 20px rgba(184, 88, 122, 0.15);
+  --shadow-medium: 0 8px 30px rgba(184, 88, 122, 0.2);
+  --shadow-strong: 0 12px 40px rgba(184, 88, 122, 0.25);
 }
 
 body {
@@ -195,14 +195,14 @@ a:hover {
   transition: all 0.3s ease;
   font-family: 'Inter', sans-serif;
   background: var(--cream-white);
-  box-shadow: inset 0 2px 4px rgba(196, 150, 154, 0.1);
+  box-shadow: inset 0 2px 4px rgba(184, 88, 122, 0.1);
 }
 
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
   border-color: var(--primary-rose);
-  box-shadow: 0 0 0 3px rgba(196, 150, 154, 0.15);
+  box-shadow: 0 0 0 3px rgba(184, 88, 122, 0.15);
   transform: translateY(-1px);
 }
 

@@ -14,7 +14,7 @@
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at 20% 20%, rgba(232, 213, 215, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 20% 20%, rgba(230, 145, 168, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
   pointer-events: none;
 }
@@ -108,7 +108,7 @@
 }
 
 .footerBottom {
-  border-top: 2px solid rgba(232, 213, 215, 0.3);
+  border-top: 2px solid rgba(230, 145, 168, 0.3);
   padding: 2rem 0;
   text-align: center;
   position: relative;
