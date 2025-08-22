@@ -94,28 +94,28 @@
 }
 
 .heroButtons .btn-primary {
-  background: rgba(255, 255, 255, 0.95);
-  color: var(--primary-green);
-  border: 2px solid var(--primary-green);
+  background: var(--warm-cream) !important;
+  color: var(--primary-green) !important;
+  border: 2px solid var(--primary-green) !important;
 }
 
 .heroButtons .btn-primary:hover {
-  background: var(--warm-cream);
-  color: var(--deep-green);
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: var(--deep-green) !important;
   transform: translateY(-4px);
   box-shadow: 0 12px 35px rgba(255, 255, 255, 0.4);
 }
 
 .heroButtons .btn-secondary {
-  background: rgba(255, 255, 255, 0.85);
-  color: var(--primary-green);
-  border: 2px solid var(--warm-cream);
+  background: var(--warm-cream) !important;
+  color: var(--primary-green) !important;
+  border: 2px solid var(--primary-green) !important;
   backdrop-filter: blur(10px);
 }
 
 .heroButtons .btn-secondary:hover {
-  background: var(--warm-cream);
-  color: var(--deep-green);
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: var(--deep-green) !important;
   transform: translateY(-4px);
   box-shadow: 0 12px 35px rgba(255, 255, 255, 0.4);
 }
