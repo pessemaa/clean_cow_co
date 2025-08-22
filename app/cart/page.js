@@ -7,6 +7,43 @@ import styles from './page.module.css'
 export default function Cart() {
   const { cartItems, removeFromCart, updateQuantity, clearCart, getTotalPrice } = useCart()
 
+  const handleDecrease = (e, item) => {
+    e.preventDefault()
+    e.stopPropagation()
+    console.log('Decrease button clicked for:', item.name)
+    const newQuantity = item.quantity - 1
+    if (newQuantity <= 0) {
+      console.log('Removing item due to quantity <= 0')
+      removeFromCart(item.id)
+    } else {
+      console.log('Updating quantity to:', newQuantity)
+      updateQuantity(item.id, newQuantity)
+    }
+  }
+
+  const handleIncrease = (e, item) => {
+    e.preventDefault()
+    e.stopPropagation()
+    console.log('Increase button clicked for:', item.name)
+    const newQuantity = item.quantity + 1
+    console.log('Updating quantity to:', newQuantity)
+    updateQuantity(item.id, newQuantity)
+  }
+
+  const handleRemoveItem = (e, productId) => {
+    e.preventDefault()
+    e.stopPropagation()
+    console.log('Remove button clicked for product:', productId)
+    removeFromCart(productId)
+  }
+
+  const handleClearCart = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    console.log('Clear cart button clicked')
+    clearCart()
+  }
+
   if (cartItems.length === 0) {
     return (
       <div className={styles.cart}>
@@ -36,6 +73,9 @@ export default function Cart() {
                   <img 
                     src={item.images?.[0] || '/placeholder-soap.jpg'} 
                     alt={item.name}
+                    onError={(e) => {
+                      e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiBmaWxsPSIjRjNGNEY2Ii8+CjxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjIwIiBmaWxsPSIjOEI0NTEzIi8+Cjwvc3ZnPg=='
+                    }}
                   />
                 </div>
                 <div className={styles.itemDetails}>
@@ -46,15 +86,19 @@ export default function Cart() {
                 
                 <div className={styles.quantityControls}>
                   <button
-                    onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                    onClick={(e) => handleDecrease(e, item)}
                     className={styles.quantityButton}
+                    aria-label="Decrease quantity"
+                    type="button"
                   >
-                    -
+                    −
                   </button>
                   <span className={styles.quantity}>{item.quantity}</span>
                   <button
-                    onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                    onClick={(e) => handleIncrease(e, item)}
                     className={styles.quantityButton}
+                    aria-label="Increase quantity"
+                    type="button"
                   >
                     +
                   </button>
@@ -65,8 +109,10 @@ export default function Cart() {
                 </div>
                 
                 <button
-                  onClick={() => removeFromCart(item.id)}
+                  onClick={(e) => handleRemoveItem(e, item.id)}
                   className={styles.removeButton}
+                  aria-label={`Remove ${item.name} from cart`}
+                  type="button"
                 >
                   Remove
                 </button>
@@ -82,8 +128,9 @@ export default function Cart() {
             
             <div className={styles.cartActions}>
               <button
-                onClick={clearCart}
+                onClick={handleClearCart}
                 className="btn btn-secondary"
+                type="button"
               >
                 Clear Cart
               </button>

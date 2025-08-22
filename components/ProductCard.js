@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import { useCart } from '../contexts/CartContext'
 import styles from './ProductCard.module.css'

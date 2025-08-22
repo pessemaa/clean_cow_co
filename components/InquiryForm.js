@@ -6,6 +6,23 @@ import Notification from './Notification'
 import styles from './InquiryForm.module.css'
 
 export default function InquiryForm({ productId, productName }) {
+  const testSupabaseConnection = async () => {
+  try {
+    console.log('Testing Supabase connection...')
+    const { data, error } = await supabase
+      .from('products')
+      .select('id, name')
+      .limit(1)
+    
+    if (error) {
+      console.error('Supabase error:', error)
+    } else {
+      console.log('Supabase connected successfully:', data)
+    }
+  } catch (err) {
+    console.error('Connection failed:', err)
+  }
+}
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -76,49 +93,59 @@ export default function InquiryForm({ productId, productName }) {
     }
   }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    
-    if (!validateForm()) {
-      return
-    }
-
-    setIsSubmitting(true)
-
-    try {
-      const inquiryData = {
-        product_id: productId,
-        customer_name: formData.name.trim(),
-        email: formData.email.trim(),
-        phone: formData.phone.trim() || null,
-        message: formData.message.trim()
-      }
-
-      await submitInquiry(inquiryData)
-
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        message: ''
-      })
-
-      setNotification({
-        type: 'success',
-        message: `Thank you for your inquiry about ${productName}! We'll get back to you soon.`
-      })
-
-    } catch (error) {
-      console.error('Error submitting inquiry:', error)
-      setNotification({
-        type: 'error',
-        message: 'There was an error submitting your inquiry. Please try again.'
-      })
-    } finally {
-      setIsSubmitting(false)
-    }
+ const handleSubmit = async (e) => {
+  e.preventDefault()
+  
+  if (!validateForm()) {
+    console.log('Form validation failed')
+    return
   }
+
+  console.log('Form data:', formData)
+  console.log('Product ID:', productId)
+  
+  setIsSubmitting(true)
+
+  try {
+    const inquiryData = {
+      product_id: productId,
+      customer_name: formData.name.trim(),
+      email: formData.email.trim(),
+      phone: formData.phone.trim() || null,
+      message: formData.message.trim()
+    }
+
+    console.log('Submitting inquiry data:', inquiryData)
+    
+    const result = await submitInquiry(inquiryData)
+    console.log('Submission result:', result)
+
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      message: ''
+    })
+
+    setNotification({
+      type: 'success',
+      message: `Thank you for your inquiry about ${productName}! We'll get back to you soon.`
+    })
+
+  } catch (error) {
+    console.error('Detailed error:', error)
+    console.error('Error message:', error.message)
+    console.error('Error details:', error.details)
+    
+    setNotification({
+      type: 'error',
+      message: `Error: ${error.message || 'There was an error submitting your inquiry. Please try again.'}`
+    })
+  } finally {
+    setIsSubmitting(false)
+  }
+}
 
   return (
     <>

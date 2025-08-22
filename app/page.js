@@ -14,9 +14,9 @@ export default function Home() {
       desc: 'Each soap is carefully handmade using traditional methods for superior quality.' 
     },
     { 
-      icon: '✨', 
-      title: 'Luxurious Experience', 
-      desc: 'Transform your daily routine into a spa-like experience with our premium soaps.' 
+      icon: '❤️', 
+      title: 'Care', 
+      desc: 'Every product is made with love and attention to provide the best experience for our customers.' 
     },
     { 
       icon: '🤝', 

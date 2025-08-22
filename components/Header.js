@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 import { useCart } from '../contexts/CartContext'
 import styles from './Header.module.css'
@@ -19,8 +20,18 @@ export default function Header() {
       <div className="container">
         <div className={styles.headerContent}>
           <div className={styles.logo}>
-            <Link href="/">
-              <h2>Clean Cow Co</h2>
+            <Link href="/" className={styles.logoLink}>
+              <div className={styles.logoContainer}>
+                <Image 
+                  src="/logo.jpeg" 
+                  alt="Clean Cow Co Logo" 
+                  width={40} 
+                  height={40}
+                  className={styles.logoImage}
+                  priority
+                />
+                <h2 className={styles.logoText}>Clean Cow Co</h2>
+              </div>
             </Link>
           </div>
           

@@ -8,7 +8,7 @@
   color: var(--white);
   text-align: center;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 25px;
   margin-bottom: 4rem;
 }
 
@@ -22,11 +22,22 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /*background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
-  background-image: 
+  /* Fallback gradient with cow-inspired colors */
+  background: linear-gradient(135deg, var(--primary-brown) 0%, var(--warm-brown) 50%, var(--soft-blue) 100%);
+  /* Add some texture with pseudo-elements */
+}
+
+.heroBackground::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
     radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%); */
+    radial-gradient(circle at 80% 20%, rgba(135, 206, 235, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
 }
 
 .heroOverlay {
@@ -35,7 +46,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, rgba(139, 69, 19, 0.7) 0%, rgba(160, 82, 45, 0.5) 50%, rgba(135, 206, 235, 0.3) 100%);
 }
 
 .heroContent {
@@ -47,122 +58,223 @@
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 1.5rem;
-  color: var(--white);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: var(--soap-white);
+  text-shadow: 2px 2px 8px rgba(44, 24, 16, 0.5);
+  font-family: 'Fredoka', cursive;
+  font-weight: 700;
+  letter-spacing: -1px;
 }
 
 .heroSubtitle {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 2.5rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  text-shadow: 1px 1px 4px rgba(44, 24, 16, 0.3);
+  line-height: 1.6;
 }
 
 .heroButtons {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
+.heroButtons .btn {
+  min-width: 200px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 8px 25px rgba(44, 24, 16, 0.3);
+}
+
+.heroButtons .btn-primary {
+  background: linear-gradient(135deg, var(--coral-pink) 0%, var(--warm-brown) 100%);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.heroButtons .btn-primary:hover {
+  background: linear-gradient(135deg, var(--warm-brown) 0%, var(--coral-pink) 100%);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(44, 24, 16, 0.4);
+}
+
+.heroButtons .btn-secondary {
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--primary-brown);
+  border: 2px solid var(--soap-white);
+  backdrop-filter: blur(10px);
+}
+
+.heroButtons .btn-secondary:hover {
+  background: var(--soap-white);
+  color: var(--warm-brown);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(255, 255, 255, 0.4);
+}
+
 .features {
-  padding: 3rem 0;
+  padding: 4rem 0;
+  background: linear-gradient(135deg, var(--bg-light) 0%, rgba(135, 206, 235, 0.05) 100%);
+  border-radius: 25px;
+  margin: 2rem 0;
 }
 
 .sectionTitle {
   text-align: center;
   margin-bottom: 3rem;
-  font-size: 2.5rem;
-  color: var(--gray-dark);
+  font-size: 2.8rem;
+  color: var(--primary-brown);
+  font-family: 'Fredoka', cursive;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(139, 69, 19, 0.1);
 }
 
 .featuresGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 
+@media (min-width: 1200px) {
+  .featuresGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .featureCard {
-  background: var(--white);
-  padding: 2rem;
-  border-radius: 12px;
+  background: linear-gradient(135deg, var(--soap-white) 0%, var(--cream) 100%);
+  padding: 2.5rem;
+  border-radius: 25px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 2px solid rgba(135, 206, 235, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.featureCard::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(135, 206, 235, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.featureCard:hover::before {
+  opacity: 1;
 }
 
 .featureCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-strong);
+  border-color: var(--bubble-blue);
 }
 
 .featureIcon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 4px 8px rgba(139, 69, 19, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.featureCard:hover .featureIcon {
+  transform: scale(1.1) rotate(5deg);
 }
 
 .featureCard h3 {
-  color: var(--primary-blue);
+  color: var(--primary-brown);
   margin-bottom: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  font-family: 'Fredoka', cursive;
+  font-weight: 600;
 }
 
 .featureCard p {
-  color: var(--gray-medium);
-  line-height: 1.6;
+  color: var(--gray-dark);
+  line-height: 1.7;
+  font-weight: 400;
 }
 
 @media (max-width: 768px) {
   .hero {
     height: 50vh;
     min-height: 350px;
+    margin-bottom: 3rem;
   }
 
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
 
   .heroSubtitle {
     font-size: 1.1rem;
+    margin-bottom: 2rem;
   }
 
   .heroButtons {
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
   }
 
   .heroButtons .btn {
     width: 100%;
     max-width: 300px;
+    min-width: auto;
   }
 
   .features {
-    padding: 2rem 0;
+    padding: 3rem 0;
+    margin: 1.5rem 0;
   }
 
   .sectionTitle {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
   }
 
   .featuresGrid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .featureCard {
-    padding: 1.5rem;
+    padding: 2rem;
   }
 }
 
 @media (max-width: 480px) {
   .hero h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .heroContent {
     padding: 0 15px;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+
+  .featureCard {
+    padding: 1.5rem;
+  }
+
+  .featureIcon {
+    font-size: 2.5rem;
   }
 }

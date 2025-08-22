@@ -7,11 +7,24 @@ export const metadata = {
   title: 'Clean Cow Co - Handmade Soaps',
   description: 'Premium handmade soaps crafted with natural ingredients. Discover our collection of artisanal soaps for a luxurious bathing experience.',
   keywords: 'handmade soaps, natural soap, artisanal soap, organic soap, Clean Cow Co',
+  icons: {
+    icon: [
+      { url: '/logo.jpeg'},
+    ],
+    apple: [
+      { url: '/logo.jpeg', type: 'image/jpeg' },
+    ],
+  },
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/logo.jpeg" sizes="any" />
+        <link rel="icon" href="/logo.jpeg" type="image/jpeg" />
+        <link rel="apple-touch-icon" href="/logo.jpeg" />
+      </head>
       <body>
         <CartProvider>
           <Header />

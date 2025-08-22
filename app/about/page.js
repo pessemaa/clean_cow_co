@@ -1,3 +1,4 @@
+import InquiryForm from '../../components/InquiryForm'
 import styles from './page.module.css'
 
 export const metadata = {
@@ -6,29 +7,6 @@ export const metadata = {
 }
 
 export default function About() {
-  const values = [
-    { 
-      icon: '🌱', 
-      title: 'Sustainability', 
-      desc: 'We prioritize eco-friendly practices and sustainable sourcing in everything we do.' 
-    },
-    { 
-      icon: '💎', 
-      title: 'Quality', 
-      desc: 'We never compromise on quality, using only premium ingredients and traditional methods.' 
-    },
-    { 
-      icon: '❤️', 
-      title: 'Care', 
-      desc: 'Every product is made with love and attention to provide the best experience for our customers.' 
-    },
-    { 
-      icon: '🤝', 
-      title: 'Community', 
-      desc: 'We support local suppliers and believe in building strong relationships with our community.' 
-    }
-  ]
-
   return (
     <div className={styles.about}>
       <div className="container">
@@ -77,7 +55,7 @@ export default function About() {
                 routine into a moment of luxury and mindfulness.
               </p>
               <p>
-                We’re committed to using environmentally responsible practices, from sourcing 
+                We&apos;re committed to using environmentally responsible practices, from sourcing 
                 our ingredients to packaging our products. Each soap is wrapped in biodegradable 
                 materials, and we continuously work to minimize our environmental footprint.
               </p>
@@ -104,17 +82,15 @@ export default function About() {
             </div>
           </div>
 
-          <div className={styles.valuesSection}>
-            <h2>Our Values</h2>
-            <div className={styles.valuesGrid}>
-              {values.map((value, index) => (
-                <div key={index} className={styles.valueCard}>
-                  <div className={styles.valueIcon}>{value.icon}</div>
-                  <h3>{value.title}</h3>
-                  <p>{value.desc}</p>
-                </div>
-              ))}
-            </div>
+          <div className={styles.inquirySection}>
+            <h2>Get In Touch</h2>
+            <p className={styles.inquirySectionText}>
+              Have questions about our products or want to make a special request? Get in touch with us!
+            </p>
+            <InquiryForm 
+              productId={null} 
+              productName="General Inquiry" 
+            />
           </div>
         </section>
       </div>
