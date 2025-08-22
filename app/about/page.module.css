@@ -12,11 +12,11 @@
 
 .aboutHeader h1 {
   font-size: 3rem;
-  color: var(--primary-brown);
+  color: var(--primary-rose);
   margin-bottom: 1.5rem;
   font-family: 'Fredoka', cursive;
   font-weight: 700;
-  text-shadow: 0 2px 4px rgba(139, 69, 19, 0.1);
+  text-shadow: 0 2px 4px rgba(196, 150, 154, 0.1);
 }
 
 .aboutIntro {
@@ -47,7 +47,7 @@
 }
 
 .textContent h2 {
-  color: var(--primary-brown);
+  color: var(--primary-rose);
   font-size: 2rem;
   margin-bottom: 1.5rem;
   font-family: 'Fredoka', cursive;
@@ -67,9 +67,9 @@
 .missionPoint {
   margin-bottom: 1rem;
   padding: 1rem;
-  background: linear-gradient(135deg, var(--bubble-blue) 0%, var(--soft-blue) 100%);
+  background: linear-gradient(135deg, var(--soft-pink) 0%, var(--blush-pink) 100%);
   border-radius: 15px;
-  border-left: 4px solid var(--primary-brown);
+  border-left: 4px solid var(--primary-rose);
   transition: transform 0.3s ease;
 }
 
@@ -78,7 +78,7 @@
 }
 
 .missionPoint strong {
-  color: var(--primary-brown);
+  color: var(--primary-rose);
   font-family: 'Fredoka', cursive;
   font-weight: 600;
 }
@@ -106,15 +106,15 @@
 .inquirySection {
   margin-top: 5rem;
   text-align: center;
-  background: linear-gradient(135deg, var(--soap-white) 0%, var(--cream) 100%);
+  background: linear-gradient(135deg, var(--cream-white) 0%, var(--blush-pink) 100%);
   border-radius: 25px;
   padding: 3rem;
   box-shadow: var(--shadow-soft);
-  border: 2px solid rgba(135, 206, 235, 0.2);
+  border: 2px solid rgba(232, 213, 215, 0.3);
 }
 
 .inquirySection h2 {
-  color: var(--primary-brown);
+  color: var(--primary-rose);
   font-size: 2.5rem;
   margin-bottom: 1rem;
   font-family: 'Fredoka', cursive;
