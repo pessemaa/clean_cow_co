@@ -8,7 +8,8 @@
   color: var(--white);
   text-align: center;
   overflow: hidden;
-  border-radius: 25px;
+  border-radius: 0px;
+  border: 4px solid var(--primary-green);
   margin-bottom: 4rem;
 }
 
@@ -93,18 +94,20 @@
 }
 
 .heroButtons .btn-primary {
-  background: linear-gradient(135deg, var(--natural-brown) 0%, var(--earth-brown) 100%);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--primary-green);
+  border: 2px solid var(--primary-green);
 }
 
 .heroButtons .btn-primary:hover {
-  background: linear-gradient(135deg, var(--earth-brown) 0%, var(--natural-brown) 100%);
+  background: var(--warm-cream);
+  color: var(--deep-green);
   transform: translateY(-4px);
-  box-shadow: 0 12px 35px rgba(44, 24, 16, 0.4);
+  box-shadow: 0 12px 35px rgba(255, 255, 255, 0.4);
 }
 
 .heroButtons .btn-secondary {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.85);
   color: var(--primary-green);
   border: 2px solid var(--warm-cream);
   backdrop-filter: blur(10px);
