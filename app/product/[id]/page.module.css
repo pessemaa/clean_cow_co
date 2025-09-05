@@ -67,11 +67,13 @@
 }
 
 .productSize {
-  background-color: var(--pale-blue);
+  background-color: var(--very-light-blue);
   color: var(--primary-blue);
   padding: 0.5rem 1rem;
   border-radius: 25px;
   font-weight: 500;
+  font-size: 0.875rem;
+  display: inline-block;
 }
 
 .productDescription h3 {

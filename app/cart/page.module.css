@@ -167,12 +167,13 @@
 
 .quantityButton:hover {
   background: linear-gradient(135deg, var(--light-sage) 0%, var(--primary-green) 100%);
-  color: var(--white);
+  color: var(--black);
   transform: scale(1.1);
 }
 
 .quantityButton:active {
   transform: scale(0.95);
+  color: var(--black);
 }
 
 .quantity {
@@ -193,7 +194,7 @@
 }
 
 .removeButton {
-  background: linear-gradient(135deg, var(--coral-accent) 0%, var(--error-red) 100%);
+  background: linear-gradient(135deg, #ff6b6b 0%, var(--error-red) 100%);
   color: white;
   border: none;
   border-radius: 15px;
