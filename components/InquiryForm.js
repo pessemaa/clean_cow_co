@@ -40,8 +40,29 @@ export default function InquiryForm({ productId, productName }) {
 
   const validatePhone = (phone) => {
     if (!phone) return true // Phone is optional
-    const phoneRegex = /^[\d\s\-\(\)\+\.]+$/
-    return phoneRegex.test(phone) && phone.replace(/\D/g, '').length >= 10
+    
+    // Remove all non-digit characters to get the raw number
+    const digitsOnly = phone.replace(/\D/g, '')
+    
+    // Must be exactly 10 digits (US phone number)
+    if (digitsOnly.length !== 10) return false
+    
+    // Check valid formats:
+    // 1234567890 (10 digits)
+    // 123-456-7890 (with dashes)
+    // (123) 456-7890 (with parentheses and dash)
+    // (123)456-7890 (with parentheses, no space, and dash)
+    // 123 456 7890 (with spaces)
+    const validFormats = [
+      /^\d{10}$/,                           // 1234567890
+      /^\d{3}-\d{3}-\d{4}$/,                // 123-456-7890
+      /^\(\d{3}\) \d{3}-\d{4}$/,            // (123) 456-7890
+      /^\(\d{3}\)\d{3}-\d{4}$/,             // (123)456-7890
+      /^\d{3} \d{3} \d{4}$/,                // 123 456 7890
+      /^\(\d{3}\) \d{3} \d{4}$/,            // (123) 456 7890
+    ]
+    
+    return validFormats.some(format => format.test(phone))
   }
 
   const validateForm = () => {
@@ -61,7 +82,7 @@ export default function InquiryForm({ productId, productName }) {
 
     // Phone validation (optional)
     if (formData.phone && !validatePhone(formData.phone)) {
-      newErrors.phone = 'Please enter a valid phone number'
+      newErrors.phone = 'Please enter a valid 10-digit phone number (e.g., 1234567890, 123-456-7890, or (123) 456-7890)'
     }
 
     // Message validation
@@ -130,7 +151,7 @@ export default function InquiryForm({ productId, productName }) {
 
     setNotification({
       type: 'success',
-      message: `Thank you for your inquiry about ${productName}! We'll get back to you soon.`
+      message: `Thank you for your inquiry! We'll get back to you soon.`
     })
 
   } catch (error) {
