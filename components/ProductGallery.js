@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import styles from './ProductGallery.module.css'
 
 export default function ProductGallery({ images, productName }) {
@@ -30,13 +31,16 @@ export default function ProductGallery({ images, productName }) {
   return (
     <div className={styles.productGallery}>
       <div className={styles.mainImageContainer}>
-        <img 
+        <Image 
           src={validImages[currentImageIndex]} 
           alt={`${productName} - Image ${currentImageIndex + 1}`}
           className={styles.mainImage}
-          onError={(e) => {
-            e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0yNTAgMTAwQzI5MC4yMTcgMTAwIDMzMCAxMTguOTA1IDMzMCAxNTBDMzMwIDE4MS4wOTUgMjkwLjIxNyAyMDAgMjUwIDIwMEMyMDkuNzgzIDIwMCAxNzAgMTgxLjA5NSAxNzAgMTUwQzE3MCAxMTguOTA1IDIwOS43ODMgMTAwIDI1MCAxMDBaIiBmaWxsPSIjMjU2M0VCIi8+CjxwYXRoIGQ9Ik0yNTAgMTgwSDI1MEMyOTAuMjE3IDE4MCAzMzAgMTk4LjkwNSAzMzAgMjMwQzMzMCAyNjEuMDk1IDI5MC4yMTcgMjgwIDI1MCAyODBIMjUwQzIwOS43ODMgMjgwIDE3MCAyNjEuMDk1IDE3MCAyMzBDMTcwIDE5OC45MDUgMjA5Ljc4MyAxODAgMjUwIDE4MFoiIGZpbGw9IiMzQjgyRjYiLz4KPHA+YXRoIGQ9Ik0yNTAgMjIwSDI1MEMyNzYuOTQ0IDIyMCAzMzAgMjI4LjgzOSAzMzAgMjQwQzMzMCAyNTEuMTYxIDI3Ni45NDQgMjYwIDI1MCAyNjBIMjUwQzIyMy4wNTYgMjYwIDE3MCAyNTEuMTYxIDE3MCAyNDBDMTcwIDIyOC44MzkgMjIzLjA1NiAyMjAgMjUwIDIyMFoiIGZpbGw9IiNEQkVBRkUiLz4KPHA+YXRoIGQ9Ik0yNTAgMzIwSDI1MEMyOTAuMjE3IDMyMCAzMzAgMzM4LjkwNSAzMzAgMzcwQzMzMCA0MDEuMDk1IDI5MC4yMTcgNDIwIDI1MCA0MjBIMjUwQzIwOS43ODMgNDIwIDE3MCA0MDEuMDk1IDE3MCAzNzBDMTcwIDMzOC45MDUgMjA5Ljc4MyAzMjAgMjUwIDMyMFoiIGZpbGw9IiMzQjgyRjYiLz4KPC9zdmc+'
-          }}
+          width={600}
+          height={600}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 50vw"
+          priority={currentImageIndex === 0}
+          placeholder="blur"
+          blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDYwMCA2MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI2MDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjRjNGNEY2Ii8+PC9zdmc+"
         />
         
         {validImages.length > 1 && (
@@ -68,12 +72,14 @@ export default function ProductGallery({ images, productName }) {
               onClick={() => goToImage(index)}
               aria-label={`View image ${index + 1}`}
             >
-              <img 
+              <Image 
                 src={image} 
                 alt={`${productName} thumbnail ${index + 1}`}
-                onError={(e) => {
-                  e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjIwIiBmaWxsPSIjMjU2M0VCIi8+Cjwvc3ZnPg=='
-                }}
+                width={80}
+                height={80}
+                sizes="80px"
+                placeholder="blur"
+                blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjRjNGNEY2Ii8+PC9zdmc+"
               />
             </button>
           ))}

@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="container">
         <div className={styles.footerContent}>
           <div className={styles.footerSection}>
-            <h3>Clean Cow Co</h3>
+            <h3>Clean Cow Co. </h3>
             <p>Handcrafted soaps made with natural ingredients for a luxurious bathing experience.</p>
           </div>
           
@@ -23,18 +23,18 @@ export default function Footer() {
           
           <div className={styles.footerSection}>
             <h4>Contact Info</h4>
-            <p>Email: info@cleancowco.com</p>
-            <p>Phone: (555) 123-4567</p>
+            <p>Email: kelly.cubjj@gmail.com</p>
+            <p>Phone: (312) 451-9499</p>
             <div className={styles.socialIcons}>
-              <a href="#" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+              <a href="https://www.instagram.com/cleancowco" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
                 <FaInstagram />
                 <span>Instagram</span>
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+              <a href="mailto:kelly.cubjj@gmail.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
                 <FaEnvelope />
                 <span>Email</span>
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+              <a href="https://linktr.ee/cleancowco" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
                 <HiExternalLink />
                 <span>Linktree</span>
               </a>

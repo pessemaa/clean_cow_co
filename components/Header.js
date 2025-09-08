@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 import { useCart } from '../contexts/CartContext'
+import { BsCart3 } from 'react-icons/bs'
 import styles from './Header.module.css'
 
 export default function Header() {
@@ -30,7 +31,7 @@ export default function Header() {
                   className={styles.logoImage}
                   priority
                 />
-                <h2 className={styles.logoText}>Clean Cow Co</h2>
+                <h2 className={styles.logoText}>Clean Cow Co. </h2>
               </div>
             </Link>
           </div>
@@ -45,7 +46,7 @@ export default function Header() {
           <div className={styles.headerActions}>
             {/* Cart Icon */}
             <Link href="/cart" className={styles.cartButton}>
-              <span className={styles.cartIcon}>🛒</span>
+              <BsCart3 className={styles.cartIcon} />
               {isLoaded && totalItems > 0 && (
                 <span className={styles.cartBadge}>
                   {totalItems}
