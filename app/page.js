@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import InquiryForm from '../components/InquiryForm'
 import styles from './page.module.css'
 
 export default function Home() {
@@ -42,9 +43,6 @@ export default function Home() {
               <Link href="/inventory" className="btn btn-primary btn-large">
                 Shop Our Products
               </Link>
-              <Link href="/about" className="btn btn-secondary btn-large">
-                Learn Our Story
-              </Link>
             </div>
           </div>
         </div>
@@ -62,6 +60,19 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className={styles.inquirySection}>
+        <div className="container">
+          <h2>Get In Touch</h2>
+          <p className={styles.inquirySectionText}>
+            Have questions about our products or want to make a special request? Get in touch with us!
+          </p>
+          <InquiryForm 
+            productId={null} 
+            productName="General Inquiry" 
+          />
         </div>
       </section>
     </div>

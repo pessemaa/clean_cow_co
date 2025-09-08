@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import { FaInstagram, FaEnvelope } from 'react-icons/fa'
+import { HiExternalLink } from 'react-icons/hi'
 import styles from './Footer.module.css'
 
 export default function Footer() {
@@ -15,7 +17,6 @@ export default function Footer() {
             <h4>Quick Links</h4>
             <ul>
               <li><Link href="/">Home</Link></li>
-              <li><Link href="/about">About</Link></li>
               <li><Link href="/inventory">Products</Link></li>
             </ul>
           </div>
@@ -24,6 +25,20 @@ export default function Footer() {
             <h4>Contact Info</h4>
             <p>Email: info@cleancowco.com</p>
             <p>Phone: (555) 123-4567</p>
+            <div className={styles.socialIcons}>
+              <a href="#" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+                <FaInstagram />
+                <span>Instagram</span>
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+                <FaEnvelope />
+                <span>Email</span>
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+                <HiExternalLink />
+                <span>Linktree</span>
+              </a>
+            </div>
           </div>
         </div>
         

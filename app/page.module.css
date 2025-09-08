@@ -268,3 +268,54 @@
     font-size: 2.5rem;
   }
 }
+
+/* Inquiry Section */
+.inquirySection {
+  margin-top: 3rem;
+  text-align: center;
+  background: linear-gradient(135deg, var(--white) 0%, var(--very-light-blue) 100%);
+  border-radius: 25px;
+  padding: 3rem;
+  box-shadow: var(--shadow-soft);
+  border: 2px solid rgba(102, 179, 255, 0.3);
+}
+
+.inquirySection h2 {
+  color: var(--primary-blue);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Fredoka', cursive;
+  font-weight: 700;
+}
+
+.inquirySectionText {
+  font-size: 1.2rem;
+  color: var(--gray-dark);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .inquirySection {
+    margin-top: 2rem;
+    padding: 2rem;
+  }
+
+  .inquirySection h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .inquirySection {
+    padding: 1.5rem;
+  }
+
+  .inquirySection h2 {
+    font-size: 1.75rem;
+  }
+
+  .inquirySectionText {
+    font-size: 1.1rem;
+  }
+}
