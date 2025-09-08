@@ -61,7 +61,6 @@
   margin-bottom: 1.5rem;
   color: var(--white);
   text-shadow: 2px 2px 8px rgba(26, 26, 26, 0.5);
-  font-family: 'Fredoka', cursive;
   font-weight: 700;
   letter-spacing: -1px;
 }
@@ -119,7 +118,6 @@
   margin-bottom: 3rem;
   font-size: 2.8rem;
   color: var(--primary-blue);
-  font-family: 'Fredoka', cursive;
   font-weight: 700;
   text-shadow: 0 2px 4px rgba(18, 128, 255, 0.1);
 }
@@ -185,7 +183,6 @@
   color: var(--primary-blue);
   margin-bottom: 1rem;
   font-size: 1.4rem;
-  font-family: 'Fredoka', cursive;
   font-weight: 600;
 }
 
@@ -284,7 +281,6 @@
   color: var(--primary-blue);
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  font-family: 'Fredoka', cursive;
   font-weight: 700;
 }
 

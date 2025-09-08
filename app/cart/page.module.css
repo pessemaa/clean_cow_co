@@ -8,7 +8,6 @@
   color: var(--primary-green);
   margin-bottom: 2.5rem;
   text-align: center;
-  font-family: 'Fredoka', cursive;
   font-weight: 700;
   text-shadow: 0 2px 4px rgba(45, 90, 39, 0.1);
 }
@@ -108,7 +107,6 @@
 .itemDetails h3 {
   margin: 0 0 0.5rem 0;
   color: var(--primary-green);
-  font-family: 'Fredoka', cursive;
   font-weight: 600;
   font-size: 1.3rem;
 }
@@ -129,7 +127,6 @@
   color: var(--deep-green);
   font-weight: 700;
   font-size: 1.1rem;
-  font-family: 'Fredoka', cursive;
 }
 
 .quantityControls {
@@ -182,7 +179,6 @@
   font-weight: 600;
   font-size: 1.1rem;
   color: var(--primary-green);
-  font-family: 'Fredoka', cursive;
   user-select: none;
 }
 
@@ -190,7 +186,6 @@
   font-weight: 700;
   color: var(--primary-green);
   font-size: 1.3rem;
-  font-family: 'Fredoka', cursive;
 }
 
 .removeButton {
@@ -203,7 +198,6 @@
   font-size: 0.9rem;
   font-weight: 600;
   transition: all 0.3s ease;
-  font-family: 'Fredoka', cursive;
   pointer-events: auto;
   z-index: 20;
   position: relative;
@@ -234,7 +228,6 @@
 .cartSummary h2 {
   margin: 0 0 2rem 0;
   color: var(--primary-green);
-  font-family: 'Fredoka', cursive;
   font-weight: 700;
   font-size: 1.8rem;
 }
@@ -247,7 +240,6 @@
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--primary-green);
-  font-family: 'Fredoka', cursive;
   padding: 1rem;
   background: linear-gradient(135deg, var(--sage-green) 0%, var(--light-sage) 100%);
   border-radius: 15px;
@@ -262,7 +254,6 @@
 .cartActions .btn {
   width: 100%;
   text-align: center;
-  font-family: 'Fredoka', cursive;
   font-weight: 600;
   pointer-events: auto;
   z-index: 10;

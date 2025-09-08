@@ -15,7 +15,6 @@
   font-size: 3rem;
   color: var(--primary-blue);
   margin-bottom: 1rem;
-  font-family: 'Fredoka', cursive;
   font-weight: 700;
   text-shadow: 0 2px 4px rgba(18, 128, 255, 0.1);
 }
@@ -70,7 +69,6 @@
 .errorContainer h2 {
   color: var(--error-red);
   margin-bottom: 1rem;
-  font-family: 'Fredoka', cursive;
 }
 
 .errorContainer p {
@@ -90,7 +88,6 @@
 .emptyState h3 {
   color: var(--primary-blue);
   margin-bottom: 1rem;
-  font-family: 'Fredoka', cursive;
   font-size: 1.8rem;
 }
 
