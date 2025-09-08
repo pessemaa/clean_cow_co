@@ -34,7 +34,7 @@ export default function Home() {
         </div>
         <div className="container">
           <div className={styles.heroContent}>
-            <h1>Welcome to Clean Cow Co</h1>
+            <h1>Welcome to Clean Cow Co. </h1>
             <p className={styles.heroSubtitle}>
               Discover our premium collection of handmade soaps crafted with natural ingredients. 
               Each bar is carefully made to provide you with a luxurious and nourishing bathing experience.
