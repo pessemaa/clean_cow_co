@@ -24,7 +24,6 @@ export default function Footer() {
           <div className={styles.footerSection}>
             <h4>Contact Info</h4>
             <p>Email: kelly.cubjj@gmail.com</p>
-            <p>Phone: (312) 451-9499</p>
             <div className={styles.socialIcons}>
               <a href="https://www.instagram.com/cleancowco" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
                 <FaInstagram />
