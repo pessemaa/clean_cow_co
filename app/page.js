@@ -12,7 +12,7 @@ export default function Home() {
     { 
       icon: '🤲', 
       title: 'Handcrafted Quality', 
-      desc: 'Each soap is carefully handmade using traditional methods for superior quality.' 
+      desc: 'Our soap is made in small batches, which means each bar is carefully handcrafted using traditional methods for superior quality.' 
     },
     { 
       icon: '❤️', 
