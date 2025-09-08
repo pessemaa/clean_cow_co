@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useCart } from '../../contexts/CartContext'
 import styles from './page.module.css'
 
@@ -70,12 +71,12 @@ export default function Cart() {
             {cartItems.map((item) => (
               <div key={item.id} className={styles.cartItem}>
                 <div className={styles.itemImage}>
-                  <img 
+                  <Image 
                     src={item.images?.[0] || '/placeholder-soap.jpg'} 
                     alt={item.name}
-                    onError={(e) => {
-                      e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDEyMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiBmaWxsPSIjRjNGNEY2Ii8+CjxjaXJjbGUgY3g9IjYwIiBjeT0iNjAiIHI9IjIwIiBmaWxsPSIjOEI0NTEzIi8+Cjwvc3ZnPg=='
-                    }}
+                    width={120}
+                    height={120}
+                    className={styles.productImage}
                   />
                 </div>
                 <div className={styles.itemDetails}>

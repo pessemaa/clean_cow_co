@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { FaInstagram, FaEnvelope } from 'react-icons/fa'
+import { FaInstagram, FaEnvelope, FaFacebook } from 'react-icons/fa'
 import { HiExternalLink } from 'react-icons/hi'
 import styles from './Footer.module.css'
 
@@ -29,6 +29,10 @@ export default function Footer() {
               <a href="https://www.instagram.com/cleancowco" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
                 <FaInstagram />
                 <span>Instagram</span>
+              </a>
+              <a href="https://www.facebook.com/CleanCowCo" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
+                <FaFacebook />
+                <span>Facebook</span>
               </a>
               <a href="mailto:kelly.cubjj@gmail.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon}>
                 <FaEnvelope />
