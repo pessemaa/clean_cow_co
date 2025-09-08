@@ -115,11 +115,9 @@ export default function ProductDetail() {
             <div className={styles.productFeatures}>
               <h4>Product Features</h4>
               <ul>
-                <li>Handcrafted with natural ingredients</li>
-                <li>Free from harsh chemicals</li>
-                <li>Suitable for all skin types</li>
-                <li>Eco-friendly packaging</li>
-                <li>Cruelty-free and vegan</li>
+                <li>Handcrafted with locally-sourced beef tallow</li>
+                <li>Simple ingredients, luxurious quality</li>
+                <li>Formulated with love</li>
               </ul>
             </div>
 
