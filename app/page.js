@@ -7,7 +7,7 @@ export default function Home() {
     { 
       icon: '🌿', 
       title: 'Natural Ingredients', 
-      desc: 'The star ingredient of our soap is beef tallow, which we render ourselves from locally-raised cows. Beef fat is a byproduct of the beef processing industry, and is usually wasted. We turn this byproduct into our liquid gold, which makes amazing soap.' 
+      desc: 'The star ingredient of our soap is beef tallow, which we render ourselves from locally-raised cows. Beef fat is a byproduct of the beef processing industry, and is usually wasted - until now.' 
     },
     { 
       icon: '🤲', 
