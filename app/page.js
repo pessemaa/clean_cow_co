@@ -36,8 +36,7 @@ export default function Home() {
           <div className={styles.heroContent}>
             <h1>Welcome to Clean Cow Co. </h1>
             <p className={styles.heroSubtitle}>
-              Discover our premium collection of handmade soaps crafted with natural ingredients. 
-              Each bar is carefully made to provide you with a luxurious and nourishing bathing experience.
+              Small batch, handcrafted soaps and skincare products made from locally-sourced beef tallow in Urbana, Illinois.
             </p>
             <div className={styles.heroButtons}>
               <Link href="/inventory" className="btn btn-primary btn-large">
