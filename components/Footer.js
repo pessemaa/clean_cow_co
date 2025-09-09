@@ -46,7 +46,7 @@ export default function Footer() {
         </div>
         
         <div className={styles.footerBottom}>
-          <p>&copy; 2024 Clean Cow Co. All rights reserved.</p>
+          <p>&copy; 2025 Clean Cow Co. All rights reserved.</p>
         </div>
       </div>
     </footer>
