@@ -114,6 +114,74 @@
   font-weight: bold;
 }
 
+.quantitySelector {
+  margin-top: 1rem;
+}
+
+.quantitySelector h4 {
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: fit-content;
+  border: 2px solid var(--very-light-blue);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.quantityBtn {
+  background-color: var(--very-light-blue);
+  border: none;
+  color: var(--primary-blue);
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantityBtn:hover:not(:disabled) {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+.quantityBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quantityInput {
+  border: none;
+  background: white;
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray-dark);
+  outline: none;
+}
+
+.quantityInput::-webkit-outer-spin-button,
+.quantityInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantityInput[type=number] {
+  -moz-appearance: textfield;
+}
+
 .productActions {
   margin-top: 1rem;
   display: flex;
@@ -200,6 +268,10 @@
 
   .productActions .btn {
     width: 100%;
+  }
+
+  .quantityControls {
+    align-self: flex-start;
   }
 }
 

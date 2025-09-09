@@ -16,6 +16,7 @@ export default function ProductDetail() {
   const [product, setProduct] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const [quantity, setQuantity] = useState(1)
 
   useEffect(() => {
     async function fetchProduct() {
@@ -36,9 +37,26 @@ export default function ProductDetail() {
     }
   }, [params.id])
 
+  const handleQuantityChange = (newQuantity) => {
+    const qty = Math.max(1, Math.min(99, newQuantity))
+    setQuantity(qty)
+  }
+
+  const handleQuantityDecrease = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1)
+    }
+  }
+
+  const handleQuantityIncrease = () => {
+    if (quantity < 99) {
+      setQuantity(quantity + 1)
+    }
+  }
+
   const handleAddToCart = () => {
     if (product) {
-      addToCart(product)
+      addToCart(product, quantity)
     }
   }
 
@@ -119,6 +137,36 @@ export default function ProductDetail() {
                 <li>Simple ingredients, luxurious quality</li>
                 <li>Formulated with love</li>
               </ul>
+            </div>
+
+            <div className={styles.quantitySelector}>
+              <h4>Quantity</h4>
+              <div className={styles.quantityControls}>
+                <button 
+                  type="button"
+                  className={styles.quantityBtn}
+                  onClick={handleQuantityDecrease}
+                  disabled={quantity <= 1}
+                >
+                  -
+                </button>
+                <input
+                  type="number"
+                  className={styles.quantityInput}
+                  value={quantity}
+                  onChange={(e) => handleQuantityChange(parseInt(e.target.value) || 1)}
+                  min="1"
+                  max="99"
+                />
+                <button 
+                  type="button"
+                  className={styles.quantityBtn}
+                  onClick={handleQuantityIncrease}
+                  disabled={quantity >= 99}
+                >
+                  +
+                </button>
+              </div>
             </div>
 
             <div className={styles.productActions}>
