@@ -22,7 +22,7 @@ export default function Home() {
     { 
       icon: '🤝', 
       title: 'Community', 
-      desc: 'We support local suppliers and believe in building strong relationships with our community.' 
+      desc: 'We support local suppliers and believe in building strong relationships with our community. Clean Cow Co. is a proud subsidiary of CU Jiu Jitsu, the premier martial arts school of Champaign-Urbana.' 
     }
   ]
 
