@@ -177,7 +177,7 @@ export default function ProductDetail() {
                 onClick={handleAddToCart}
                 className="btn btn-primary"
               >
-                Add to Cart - ${product.price}
+                Add to Cart - ${(product.price * quantity).toFixed(2)}
               </button>
             </div>
           </div>
