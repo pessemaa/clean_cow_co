@@ -36,7 +36,7 @@ export default function Home() {
           <div className={styles.heroContent}>
             <h1>Welcome to Clean Cow Co. </h1>
             <p className={styles.heroSubtitle}>
-              Small batch, handcrafted soaps and skincare products made from locally-sourced beef tallow in Urbana, Illinois.
+              Our handcrafted beef tallow soaps are gentle, creamy, and provides a luxurious clean. Unlike commercial soaps that can strip and dry out your skin, tallow creates a bubbly lather that cleanses gently while helping to restore and protect your skin’s natural barrier, leaving you soft, smooth, and nourished.
             </p>
             <div className={styles.heroButtons}>
               <Link href="/inventory" className="btn btn-primary btn-large">
